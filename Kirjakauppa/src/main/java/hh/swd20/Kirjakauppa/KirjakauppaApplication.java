@@ -26,12 +26,6 @@ public class KirjakauppaApplication {
 	public CommandLineRunner bookDemo(BookRepository bookRepository, CategoryRepository ctgrRepository) { 
 		return (args) -> {
 			log.info("Save some books");
-			/*	private Long id;
-				private String title;
-				private String author;
-				private int year;
-				private String isbn;
-				private int price;*/
 		
 			ctgrRepository.save(new Category("Biography"));
 			ctgrRepository.save(new Category("Encyclopedia"));

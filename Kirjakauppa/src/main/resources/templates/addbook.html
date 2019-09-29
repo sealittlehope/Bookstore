@@ -14,11 +14,11 @@
 	<p>ISBN: <input type="text" th:field="${book.isbn}" /></p>
 	<p>Price: <input type="text" th:field="${book.price}" /></p>
 				
-		  	<label for="ctgrlist">Category</label>
-			 <select id="ctgrlist" th:field="*{category}" class="form-control">
-       			<option th:each="category: ${categories}" th:value="${category.categoryid}" th:text="${category.name}"></option>
-    		</select>
-    	
+	<p><label for="ctgrlist">Category: </label>
+		 <select id="ctgrlist" th:field="*{category}" class="form-control">
+      			<option th:each="category: ${categories}" th:value="${category.categoryid}" th:text="${category.name}"></option>
+         </select>
+    </p>
 	<input type="submit" value="Lähetä" /> <input type="reset" value="Tyhjennä" />
 	</form>
     
